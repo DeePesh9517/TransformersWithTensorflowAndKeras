@@ -71,3 +71,34 @@
         <td>(Nx, Dx)</td>
     </tr>
 </table>
+
+* **Similarity function**: *f*att, which is a **Feed-forward network**.
+* The feed-forward network takes the query and input, and projects both of them to dimension De.
+
+##### Outputs:
+<table>
+    <tr>
+        <th></th>
+        <th>Notation</th>
+        <th>Equation</th>
+        <th>shape</th>
+    </tr>
+    <tr>
+        <td>Similarity Score</td>
+        <td>e</td>
+        <td>_e_i = _f_att(Xi, q)</td>
+        <td>(Nx, De)</td>
+    </tr>
+    <tr>
+        <td>Attention Weights</td>
+        <td>a</td>
+        <td>a=softmax(e)</td>
+        <td>(Nx)</td>
+    </tr>
+    <tr>
+        <td>Output Vector</td>
+        <td>y</td>
+        <td>y = summation(ai.Xi)</td>
+        <td>(Dx)</td>
+    </tr>
+</table>
