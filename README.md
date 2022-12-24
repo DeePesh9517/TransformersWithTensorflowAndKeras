@@ -15,4 +15,4 @@
 * The transformer consits of two individual models.
     - Decoder
     - Encoder
-<img src="images/transformer_arch.png" width="350" title="hover text">
+<img src="images/transformer_arch_2.png" width="350" title="hover text">
