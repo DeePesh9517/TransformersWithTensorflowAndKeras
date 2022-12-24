@@ -102,3 +102,58 @@
         <td>(Dx)</td>
     </tr>
 </table>
+
+## Version 1
+> The two most commonly used attention functions are additive attention and dot-product (multiplicative) attention. Aditive attention computes the compatibility function using a feed-forward network.
+
+* The first change we make to mechanism is swapping out the feed-forward network wiht a dot product operation.
+* Turns out that this is highly efficient with reasonably good results.
+* While we use the dot product, notice how the shape of the input vectors now change to incorporate the dot product.
+##### Inputs:
+<table>
+    <tr>
+        <th></th>
+        <th>Notation</th>
+        <th>Shape</th>
+    </tr>
+    <tr>
+        <td>Query Vector</td>
+        <td>q</td>
+        <td>(Dq)</td>
+    </tr>
+    <tr>
+        <td>Input Matrix</td>
+        <td>X</td>
+        <td>(Nx, Dq)</td>
+    </tr>
+</table>
+
+**Similarity function:** Dot Product
+##### Outputs:
+<table>
+    <tr>
+        <th></th>
+        <th>Notation</th>
+        <th>Equation</th>
+        <th>shape</th>
+    </tr>
+    <tr>
+        <td>Similarity Score</td>
+        <td>e</td>
+        <td>_e_i = ei = q.Xi</td>
+        <td>(Nx, Dq)</td>
+    </tr>
+    <tr>
+        <td>Attention Weights</td>
+        <td>a</td>
+        <td>a=softmax(e)</td>
+        <td>(Nx)</td>
+    </tr>
+    <tr>
+        <td>Output Vector</td>
+        <td>y</td>
+        <td>y = summation(ai.Xi)</td>
+        <td>(Dx)</td>
+    </tr>
+</table>
+
