@@ -15,5 +15,4 @@
 * The transformer consits of two individual models.
     - Decoder
     - Encoder
-<img src="images/transformer_arch.png">
-
+![plot](./images/transformer_arch.png)
